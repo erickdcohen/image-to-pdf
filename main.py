@@ -36,7 +36,7 @@ def main(argv):
         os.path.join(file_path, "combined.pdf"), 
         "PDF", 
         save_all=True, 
-        append_images=img_list
+        append_images=img_list[1:]
     )
 
     print(f"\nFile converted to PDF and combined successfully.")
