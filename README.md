@@ -5,11 +5,11 @@ Python file used to convert images to a single PDF document
 Usage
 
 ```
-python3 $PATH_TO_DIR_WITH_IMAGES
+python3 main.py $PATH_TO_DIR_WITH_IMAGES
 ```
 
 dependencies:
-Pillow package
-[HEIC2PNG dependency](https://github.com/NatLee/HEIC2PNG)
+- Pillow package
+- [HEIC2PNG dependency](https://github.com/NatLee/HEIC2PNG)
 
 Can convert .png, .heic, .jpg
