@@ -7,7 +7,7 @@ from PIL import Image
 def main(argv):
     """
     Convert all images in a folder to PDF
-    arg1:
+    arg1: path to folder where images are
     """
     if len(argv) != 2:
         print("Did you specify a filepath?")
