@@ -2,24 +2,31 @@
 import os
 import re
 import sys
+
+from heic2png import HEIC2PNG
 from PIL import Image
 
-def main(argv):
+def main(argv) -> int:
     """
     Convert all images in a folder to PDF
-    arg1: path to folder where images are
+    arg[1]: Filepath to directory with images
     """
-    if len(argv) != 2:
+    if len(argv) < 2:
         print("Did you specify a filepath?")
         return 1 
+    if len(argv) >= 3:
+        print("Error. Too many arguments provided. Only specify one filepath")
+        return 2
     # get file path from argv user input
     file_path = argv[1]
     # get a list of the files in the directory
     files = os.listdir(file_path)
-    # check for heic files
+    # check for heic files. If found, convert to PNG
     for file in files:
         if re.match("(.*\.HEIC$)|(.*\.heic$)", file):
-            os.system(f"heic2png --input_path {os.path.join(file_path, file)}")
+            heic_img_filepath = os.path.join(file_path, file)
+            heic_img = HEIC2PNG(heic_img_filepath)
+            heic_img.save()
 
     # sort the list after rereading
     files = [file for file in os.listdir(file_path) if re.search("^($\.)|.*\.png$", file)]
@@ -28,7 +35,7 @@ def main(argv):
     img_list = []
     # open each file convert to PDF and append 
     for i, file in enumerate(files):
-        print(f"\nConverting file {i}). {file}.")
+        print(f"\nConverting file number {i} to -> {file}.")
         img = Image.open(os.path.join(file_path, file)).convert("RGB")
         img_list.append(img)
     # Append images together
