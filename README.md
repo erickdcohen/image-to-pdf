@@ -1,15 +1,19 @@
 # image-to-pdf
 
-Python file used to convert images to a single PDF document
+Convert all images in a directory to a single PDF document.
+Can convert .png, .heic, .jpg
 
-Usage
+## Usage
+
+---
 
 ```
 python3 main.py $PATH_TO_DIR_WITH_IMAGES
 ```
 
-dependencies:
-- Pillow package
-- [HEIC2PNG dependency](https://github.com/NatLee/HEIC2PNG)
+## Dependencies
 
-Can convert .png, .heic, .jpg
+---
+
+- [Pillow](https://github.com/python-pillow/Pillow)
+- [HEIC2PNG](https://github.com/NatLee/HEIC2PNG)
