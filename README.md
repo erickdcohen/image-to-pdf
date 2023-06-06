@@ -1,14 +1,14 @@
-# image-to-pdf
+# imageToPdf
 
 Convert all images in a directory to a single PDF document.
 Can convert .png, .heic, .jpg
 
 ## Usage
 
----
+## Command Line
 
 ```
-python3 main.py $PATH_TO_DIR_WITH_IMAGES
+python3 imageToPdf.py $PATH_TO_DIR_WITH_IMAGES
 ```
 
 ## Dependencies
