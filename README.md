@@ -7,8 +7,16 @@ Can convert .png, .heic, .jpg
 
 ## Command Line
 
+Mac OS
+
 ```
 python3 imageToPdf.py $PATH_TO_DIR_WITH_IMAGES
+```
+
+Windows
+
+```
+py imageToPdf.py $PATH_TO_DIR_WITH_IMAGES
 ```
 
 ## Dependencies
